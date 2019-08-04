@@ -15,6 +15,7 @@ async def getyt(request):
     if(request.method == "POST"):
         body = request.json
         url = body.get('url')
+        #url = request.form.get('url')
         response = await GetDetails(url).get()
     return json(response)
 
